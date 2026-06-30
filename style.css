@@ -1,0 +1,159 @@
+:root {
+    --navy: #002040; 
+    --cream: #FAF9F6;
+    --sage: #849B84; 
+    --gray: #2d3748;
+    --d-gray: #94a3b8;
+    --l-gray: #cbd5e1;
+    --font: Lora, sans-serif;
+    --font2: Nunito, sans-serif;
+}
+
+h1 {
+    font-family: var(--font);
+    color: var(--cream);
+    text-align: center;
+    font-size: 7vh;
+}
+
+p {
+    font-family: var(--font2);
+    color: var(--cream);
+    text-align: center;
+    font-size: 5vh;
+}
+
+button {
+    padding: 12px 24px; 
+    min-width: 300px;
+    background-color: var(--cream);
+    color: var(--gray);
+    border: 1px solid var(--l-gray);
+    border-radius: 6px;
+    font-family: var(--font);
+    font-size: 40px; 
+    font-weight: 500; 
+    cursor: pointer; 
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    background-color: var(--gray); 
+    color: var(--cream);
+    border-color: var(--d-gray); 
+    transform: translateY(-1px); 
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cream);
+}
+
+main {
+    flex: 1;
+    background-color: var(--cream);
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header, footer {
+    background-color: var(--navy);
+    font-family: var(--font);
+}
+
+.flip-card {
+    width: min(1000px, 100%);
+    height: 600px;
+    perspective: 1000px;
+}
+
+.collage {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.card-back {
+    display: grid;
+    transform: rotateY(180deg);
+    background-color: var(--sage);
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(2, auto);
+    align-items: center;
+    align-content: space-evenly;
+    justify-items: center;
+    gap: 30px;
+    padding: 30px;
+    box-sizing: border-box;
+    grid-template-areas:
+        "one two three"
+        "four five six"
+}
+
+.one   { grid-area: one; }
+.two   { grid-area: two; }
+.three { grid-area: three; }
+.four  { grid-area: four; }
+.five  { grid-area: five; }
+.six   { grid-area: six; }
+
+.card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    inset: 2%;
+    background-color: var(--navy);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup.open {
+    display: flex;
+}
+
+.popup-content {
+    background-color: var(--cream);
+    padding: 30px;
+    min-width: 800px;
+    min-height: 400px;
+    overflow-y: auto;
+}
+
+.popup-content p {
+    color: var(--gray);
+}

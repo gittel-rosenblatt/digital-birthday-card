@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="card-flip.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Happy birthday! We love you!</h1>
+    </header>
+
+    <main>
+        <div class="flip-card">
+            <div class="card-inner">
+
+                <div class="card-front">
+                    <img class="collage" src="images/collage.png" alt="collage of family photos">
+                </div>
+
+                <div class="card-back">
+                    
+                    <div class="buttons">
+                        <button class="message-button one" data-popup="name1">From<br>[name]</button>
+                        <button class="message-button two" data-popup="surname1">From the [surname]s</button>
+                        <button class="message-button three" data-popup="surname2">From the [surname]s</button>
+                        <button class="message-button four" data-popup="surname3">From the [surname]s</button>
+                        <button class="message-button five" data-popup="surname4">From the [surname]s</button>
+                        <button class="message-button six" data-popup="name2">From<br>[name]</button>
+                    </div>
+
+                    <div class="popup" id="name1">
+                        <div class="popup-content">
+                            <p>Message here</p>
+                            <button class="close-button">Close</button>
+                        </div>
+                    </div>
+
+                    <div class="popup" id="surname1">
+                        <div class="popup-content">
+                            <p>Message here</p>
+                            <button class="close-button">Close</button>
+                        </div>
+                    </div>
+
+                    <div class="popup" id="surname2">
+                        <div class="popup-content">
+                            <p>Message here</p>
+                            <button class="close-button">Close</button>
+                        </div>
+                    </div>
+
+                    <div class="popup" id="surname3">
+                        <div class="popup-content">
+                            <p>Message here</p>
+                            <button class="close-button">Close</button>
+                        </div>
+                    </div>
+
+                    <div class="popup" id="surname4">
+                        <div class="popup-content">
+                            <p>Message here</p>
+                            <button class="close-button">Close</button>
+                        </div>
+                    </div>
+
+                    <div class="popup" id="name2">
+                        <div class="popup-content">
+                            <p>Message here</p>
+                            <button class="close-button">Close</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <h1>We hope you have an amazing birthday!</h1>
+    </footer>
+</body>
+</html>
